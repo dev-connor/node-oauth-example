@@ -1,8 +1,5 @@
 // @ts-check
 
-const { v4: uuidv4 } = require('uuid')
-
-const { getUsersCollection } = require('./mongo')
 const { signJWT } = require('./jwt')
 
 
@@ -14,6 +11,5 @@ async function getAccessTokenForUserId(userId) {
 }
 
 module.exports = {
-  createUserWithFacebookIdAndGetId,
   getAccessTokenForUserId,
 }
