@@ -20,7 +20,7 @@
           {
             method: 'POST',
           }
-          )
+          ).then(() => window.location.reload())
       }, 
       {scope: 'public_profile,email'}
       )

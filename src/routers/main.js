@@ -7,8 +7,6 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
 
-  // @ts-ignore
-  console.log('userId', req.userId)
   
   res.render('index', {
     // @ts-ignore
@@ -21,6 +19,8 @@ router.get('/', (req, res) => {
 
 router.get('/logout', (req, res) => {
   // TODO: implement
+  res.clearCookie('access_token')
+  res.redirect('/')
 })
 
 module.exports = router

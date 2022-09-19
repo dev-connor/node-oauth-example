@@ -66,7 +66,7 @@ async function getFacebookIdFromAccessToken(accessToken) {
 async function getUserIdWithFacebookId(facebookId) {
   // TODO: implement it
   const users = await getUsersCollection()
-  const user = users.findOne({
+  const user = await users.findOne({
     facebookId,
   })
 
