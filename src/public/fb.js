@@ -7,8 +7,16 @@
       xfbml      : true,
       version    : 'v10.0',
     })
-      
-    FB.AppEvents.logPageView() 
+
+    document.getElementById('fb-login').addEventListener('click', () => {
+      FB.login(
+        (response) => {
+        // handle the response
+        console.log(response)
+      }, 
+      {scope: 'public_profile,email'}
+      )
+    })
   }
 
 
